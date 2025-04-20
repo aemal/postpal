@@ -4,9 +4,16 @@
 
 ---
 
-## 🧑‍💻 User Story
+## 🧑‍💻 User Stories
 
-As a frequent LinkedIn user, I want to generate AI-assisted replies, reposts, and original posts quickly and efficiently so I can stay active without spending too much mental energy crafting content.
+### 💬 Commenting User Story
+As a LinkedIn professional, I want to quickly generate thoughtful comments on posts I find interesting, so I can engage meaningfully with my network without spending excessive time crafting responses.
+
+### 🔁 Reposting User Story
+As a content curator on LinkedIn, I want to share valuable posts with my network along with my personalized perspective, so I can provide context on why the content matters while saving time on writing.
+
+### 📝 New Post User Story
+As a LinkedIn content creator, I want to efficiently create original posts based on my ideas, so I can maintain an active presence and share insights without the mental burden of wordsmithing every post.
 
 ---
 
@@ -18,8 +25,8 @@ As a frequent LinkedIn user, I want to generate AI-assisted replies, reposts, an
 2. A **"💬 Answer with AI"** button is visible below the post (injected by the extension).
 3. When I click it:
    - A prompt input box appears.
-   - I write either a draft or a short instruction (e.g., “Write a supportive response”).
-4. The extension uses ChatGPT to generate a response based on the post’s content and my instruction.
+   - I write either a draft or a short instruction (e.g., "Write a supportive response").
+4. The extension uses ChatGPT to generate a response based on the post's content and my instruction.
 5. The result is auto-filled into the comment input box under the post.
 6. I proofread, tweak if needed, and click **Comment**.
 
@@ -28,15 +35,15 @@ As a frequent LinkedIn user, I want to generate AI-assisted replies, reposts, an
 1. I see a post I want to share.
 2. A **"🔁 Repost with AI"** button appears next to the usual repost options.
 3. When I click it:
-   - A prompt input appears: “How should the repost text be written?”
-   - I type something like: *“Summarize with excitement and mention its value for developers.”*
+   - A prompt input appears: "How should the repost text be written?"
+   - I type something like: *"Summarize with excitement and mention its value for developers."*
 4. A **LinkedIn repost window** opens, with the AI-generated caption pre-filled.
 5. I proofread and click **Post**.
 
 ### 🆕 Use Case 3: New Post with AI
 
 1. I click the extension icon in the Chrome toolbar or an inline **"📝 New Post with AI"** button.
-2. A modal opens where I write instructions like *“Announce our new product update with enthusiasm”*.
+2. A modal opens where I write instructions like *"Announce our new product update with enthusiasm".*
 3. AI generates the post and injects it into the **new post modal** on LinkedIn.
 4. I do final edits and click **Post**.
 
@@ -44,7 +51,7 @@ As a frequent LinkedIn user, I want to generate AI-assisted replies, reposts, an
 
 ## 🔧 Full Stack Feature Summary
 
-- Context-aware AI responses based on LinkedIn’s DOM.
+- Context-aware AI responses based on LinkedIn's DOM.
 - Three modes: **Comment**, **Repost**, **New Post**.
 - Backend API for ChatGPT generation via `/api/generate`.
 - Chrome extension using **Manifest V3**, **content scripts**, and **popup UI**.
@@ -57,18 +64,24 @@ As a frequent LinkedIn user, I want to generate AI-assisted replies, reposts, an
 
 ```bash
 postpal/
+├── app/
+│   ├── api/
+│   │   └── generate/
+│   │       └── route.ts
+│   ├── popup/
+│   │   └── page.tsx
+│   └── layout.tsx
 ├── public/
-│   └── icons/
-├── src/
+│   ├── icons/
+│   ├── background.js
+│   └── content.js
+├── extension/
 │   ├── background.ts
 │   ├── content.ts
-│   ├── popup/
-│   ├── pages/
 │   └── utils/
-├── .env
+├── .env.local
 ├── manifest.json
 ├── bunfig.toml
-├── vite.config.ts
 ├── next.config.js
 └── README.md
 ```
