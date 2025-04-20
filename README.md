@@ -6,20 +6,27 @@
 
 ## 🧑‍💻 User Stories
 
+### 📝 New Post User Story
+As a LinkedIn content creator, I want to efficiently create original posts based on my ideas, so I can maintain an active presence and share insights without the mental burden of wordsmithing every post.
+
 ### 💬 Commenting User Story
 As a LinkedIn professional, I want to quickly generate thoughtful comments on posts I find interesting, so I can engage meaningfully with my network without spending excessive time crafting responses.
 
 ### 🔁 Reposting User Story
 As a content curator on LinkedIn, I want to share valuable posts with my network along with my personalized perspective, so I can provide context on why the content matters while saving time on writing.
 
-### 📝 New Post User Story
-As a LinkedIn content creator, I want to efficiently create original posts based on my ideas, so I can maintain an active presence and share insights without the mental burden of wordsmithing every post.
-
 ---
 
 ## ✨ Core UX Flows
 
-### ✅ Use Case 1: Commenting on a Post
+### 🆕 Use Case 1: New Post with AI
+
+1. I click the extension icon in the Chrome toolbar or an inline **"📝 New Post with AI"** button.
+2. A modal opens where I write instructions like *"Announce our new product update with enthusiasm".*
+3. AI generates the post and injects it into the **new post modal** on LinkedIn.
+4. I do final edits and click **Post**.
+
+### ✅ Use Case 2: Commenting on a Post
 
 1. I see a LinkedIn post I want to respond to.
 2. A **"💬 Answer with AI"** button is visible below the post (injected by the extension).
@@ -30,7 +37,7 @@ As a LinkedIn content creator, I want to efficiently create original posts based
 5. The result is auto-filled into the comment input box under the post.
 6. I proofread, tweak if needed, and click **Comment**.
 
-### 🔁 Use Case 2: Reposting with AI
+### 🔁 Use Case 3: Reposting with AI
 
 1. I see a post I want to share.
 2. A **"🔁 Repost with AI"** button appears next to the usual repost options.
@@ -39,13 +46,6 @@ As a LinkedIn content creator, I want to efficiently create original posts based
    - I type something like: *"Summarize with excitement and mention its value for developers."*
 4. A **LinkedIn repost window** opens, with the AI-generated caption pre-filled.
 5. I proofread and click **Post**.
-
-### 🆕 Use Case 3: New Post with AI
-
-1. I click the extension icon in the Chrome toolbar or an inline **"📝 New Post with AI"** button.
-2. A modal opens where I write instructions like *"Announce our new product update with enthusiasm".*
-3. AI generates the post and injects it into the **new post modal** on LinkedIn.
-4. I do final edits and click **Post**.
 
 ---
 
